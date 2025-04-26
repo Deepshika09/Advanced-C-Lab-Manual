@@ -60,6 +60,7 @@ Thus, the program is verified successfully.
 
 
 EXP NO:2 C PROGRAM FOR PASSING STRUCTURES AS FUNCTION ARGUMENTS AND RETURNING A STRUCTURE FROM A FUNCTION
+
 Aim:
 To write a C program for passing structure as function and returning a structure from a function
 
