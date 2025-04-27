@@ -147,7 +147,46 @@ Free the memory allocated for each string in s Free the memory allocated for s
  
 Program:
 
-//type your code here
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+int next_permutation(char *str) {
+    int i = strlen(str) - 2;
+    while (i >= 0 && str[i] >= str[i + 1]) {
+        i--;
+    }
+    if (i < 0) return 0; 
+    int j = strlen(str) - 1;
+    while (str[j] <= str[i]) {
+        j--;
+    }
+    char temp = str[i];
+    str[i] = str[j];
+    str[j] = temp;
+    
+    int left = i + 1, right = strlen(str) - 1;
+    while (left < right) {
+        temp = str[left];
+        str[left] = str[right];
+        str[right] = temp;
+        left++;
+        right--;
+    }
+    return 1;
+}
+
+int main() {
+    char str[50];
+        printf("Enter a string: ");
+    scanf("%s", str);
+    qsort(str, strlen(str), sizeof(char), (int(*)(const void*, const void*))strcmp);
+    do {
+        printf("%s\n", str);
+    } while (next_permutation(str));
+
+    return 0;
+}
 
 
 
@@ -155,7 +194,7 @@ Program:
 Output:
 
 
-//paste your output here
+![image](https://github.com/user-attachments/assets/e059c7ab-7129-4219-9efc-849654aa899e)
 
 
 
@@ -180,7 +219,24 @@ Algorithm:
  
 Program:
 
-//type your code here
+#include <stdio.h>
+
+int main() {
+    int n, i, j;
+    printf("Enter the value of n: ");
+    scanf("%d", &n);
+    for (i = 0; i < 2 * n - 1; i++) {   
+        for (j = 0; j < 2 * n - 1; j++) { 
+            int min = i < j ? i : j;  
+            min = min < (2 * n - 2 - i) ? min : (2 * n - 2 - i); 
+            min = min < (2 * n - 2 - j) ? min : (2 * n - 2 - j); 
+            printf("%d ", n - min);
+        }
+        printf("\n"); 
+    }
+
+    return 0;
+}
 
 
 
@@ -188,7 +244,7 @@ Program:
 Output:
 
 
-//paste your output here
+![image](https://github.com/user-attachments/assets/7900e6f2-262f-45e1-ba70-dc932d4e868e)
 
 
 
@@ -219,7 +275,22 @@ o	Call the square() function and display the result.
 
 Program:
 
-//type your code here
+#include <stdio.h>
+int square() {
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num); 
+    return num * num; 
+}
+
+int main() {
+    int result;
+    result = square();
+    printf("The square of the number is: %d\n", result);
+
+    return 0;
+}
+
 
 
 
@@ -227,7 +298,7 @@ Program:
 Output:
 
 
-//paste your output here
+![image](https://github.com/user-attachments/assets/7919d383-d175-4a4a-a9a0-8e9519a73fad)
 
 
 
