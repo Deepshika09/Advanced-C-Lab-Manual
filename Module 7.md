@@ -249,15 +249,47 @@ Algorithm:
 
 Program:
 
-//type your code here
+#include <stdio.h>
+#include <stdlib.h>
 
+struct subject {
+    char name[50];
+    int marks;
+};
 
+int main() {
+    struct subject *s;
+    int n, i;
+
+    printf("Enter the number of subjects: ");
+    scanf("%d", &n);
+
+    s = (struct subject *)malloc(n * sizeof(struct subject));
+
+    if (s == NULL) {
+        printf("Memory allocation failed!\n");
+        return 1; 
+    }
+    for (i = 0; i < n; i++) {
+        printf("Enter name of subject %d: \n", i + 1);
+        scanf("%s", s[i].name);
+        printf("Enter marks of subject %d: \n", i + 1);
+        scanf("%d", &s[i].marks);
+    }
+    printf("\n--- Subject Details ---\n");
+    for (i = 0; i < n; i++) {
+        printf("Subject %d: Name = %s, Marks = %d\n", i + 1, s[i].name, s[i].marks);
+    }
+    free(s);
+
+    return 0;
+}
 
 
 Output:
 
 
-//paste your output here
+![image](https://github.com/user-attachments/assets/ced37eb4-b337-4953-b1fc-367c483c59c9)
 
 
 
