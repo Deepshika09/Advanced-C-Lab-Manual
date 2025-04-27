@@ -167,6 +167,7 @@ Thus, the program is verified successfully
 
 
 EXP NO:4   PROGRAM TO READ A FILE NAME FROM USER, WRITE THAT FILE AND INSERT TEXT IN TO THAT FILE
+
 Aim:
 To write a C program to read, a file and insert text in that file
 Algorithm:
@@ -208,7 +209,12 @@ int main(){
 
 
 Output:
+
+
+
 ![image](https://github.com/user-attachments/assets/90b24257-75ea-4df0-b33a-73ecabe2c002)
+
+
 
 Result:
 Thus, the program is verified successfully
