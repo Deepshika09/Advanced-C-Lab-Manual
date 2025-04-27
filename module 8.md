@@ -73,6 +73,7 @@ Result:
 Thus, the program is verified successfully
  
 EXP NO:7 C PROGRAM TO PRINT TEN SPACE-SEPARATED INTEGERS     IN A SINGLE  LINE DENOTING THE FREQUENCY OF EACH DIGIT FROM 0 TO 3 .
+
 Aim:
 To write a C program to print ten space-separated integers in a single line denoting the frequency of each digit from 0 to 3.
 Algorithm:
@@ -85,7 +86,31 @@ Algorithm:
  
 Program:
 
-//type your code here
+#include <stdio.h>
+
+int main() {
+    char a[50];
+    int h, c, i;
+
+    
+    printf("Enter the string (digits 0-9): ");
+    scanf("%s", a);
+
+    for (h = 0; h <= 3; h++) {
+        c = 0; 
+
+        for (i = 0; a[i] != '\0'; i++) {
+            if (a[i] - '0' == h) {  
+                c++;
+            }
+        }
+
+        printf("%d ", c);
+    }
+
+    printf("\n"); 
+    return 0;
+}
 
 
 
@@ -93,7 +118,7 @@ Program:
 Output:
 
 
-//paste your output here
+![image](https://github.com/user-attachments/assets/d9aaa668-e993-489f-9a49-8469f0b47f64)
 
 
 
