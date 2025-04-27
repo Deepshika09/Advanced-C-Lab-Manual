@@ -12,7 +12,7 @@ Algorithm:
 7.	Use the display function to visualize the stack's contents
  
 Program:
-
+```
 float stack[100];
 int top,i;
 void display()
@@ -20,6 +20,7 @@ void display()
     printf("%.1f\n",stack[i]);
 }
 }
+```
 Output:
 
 ![image](https://github.com/user-attachments/assets/598437ce-8378-44a5-a97a-dfa7fc269615)
@@ -40,7 +41,7 @@ Algorithm:
 4.	Call the push function as needed.
  
 Program:
-
+```
 int size=3,top=-1,stack[100];
 void push (int data)
 {
@@ -51,6 +52,7 @@ void push (int data)
     top++;
     stack[top]=data;
 }
+```
 Output:
 
 
@@ -75,7 +77,7 @@ Algorithm:
 4.	Call the display function and perform other queue operations as needed.
  
 Program:
-
+```
 int queue[50], rear=-1, front=-1;
 void display()
 {
@@ -86,6 +88,7 @@ void display()
         printf("%d\n",queue[i]);
     }
 }
+```
 Output:
 
 
@@ -108,7 +111,7 @@ Algorithm:
 4.	Call the enqueue function as needed.
 
 Program:
-
+```
 int queue[50],size=10,front=-1,rear=-1;
 void enqueue(int data)
 {
@@ -119,6 +122,7 @@ void enqueue(int data)
     rear++;
     queue[rear]=data;
 }
+```
 Output:
 
 
@@ -152,7 +156,7 @@ o	After deletion, check if the front pointer has passed the rear pointer (front 
 
 
 Program:
-
+```
 int front, rear;
 void dequeue()
 {  if(front>rear||front==-1)
@@ -160,6 +164,7 @@ printf("Queue Underflow.\n");
 else
     front++;
 }
+```
 Output:
 
 
