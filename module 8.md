@@ -146,7 +146,7 @@ Free the memory allocated for each string in s Free the memory allocated for s
 7.	End
  
 Program:
-
+```
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -188,7 +188,7 @@ int main() {
     return 0;
 }
 
-
+```
 
 
 Output:
