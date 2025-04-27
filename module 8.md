@@ -85,7 +85,7 @@ Algorithm:
 6.	End
  
 Program:
-
+```
 #include <stdio.h>
 
 int main() {
@@ -112,7 +112,7 @@ int main() {
     return 0;
 }
 
-
+```
 
 
 Output:
@@ -218,7 +218,7 @@ Algorithm:
 7.	End
  
 Program:
-
+```
 #include <stdio.h>
 
 int main() {
@@ -238,7 +238,7 @@ int main() {
     return 0;
 }
 
-
+```
 
 
 Output:
@@ -274,7 +274,7 @@ o	Call the square() function and display the result.
 5.	End.
 
 Program:
-
+```
 #include <stdio.h>
 int square() {
     int num;
@@ -290,10 +290,7 @@ int main() {
 
     return 0;
 }
-
-
-
-
+```
 
 Output:
 
