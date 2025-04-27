@@ -15,7 +15,6 @@ Algorithm:
 4.	Exit the program.
  
 Program:
-
 #include <stdio.h>
 
 int main() {
