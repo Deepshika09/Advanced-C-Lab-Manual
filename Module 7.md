@@ -75,15 +75,41 @@ Algorithm:
  
 Program:
 
-//type your code here
+#include <stdio.h>
+struct numbers {
+    int a;
+    int b;
+};
 
+struct numbers add(struct numbers n) {
+    struct numbers result;
+    result.a = n.a + n.b;  
+    return result;
+}
+
+int main() {
+    struct numbers n, sum;
+
+    printf("Enter value for a: ");
+    scanf("%d", &n.a);
+
+    printf("Enter value for b: ");
+    scanf("%d", &n.b);
+
+    sum = add(n);
+
+
+    printf("Sum of a and b = %d\n", sum.a);
+
+    return 0;
+}
 
 
 
 Output:
 
 
-//paste your output here
+![Screenshot 2025-04-27 150844](https://github.com/user-attachments/assets/bd12bf5d-7f2b-49e2-8cb6-1880d25bb018)
 
 
 
