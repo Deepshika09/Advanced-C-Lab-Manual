@@ -143,25 +143,23 @@ Use scanf to input the file name into the name array.
  
 Program:
 
-//type your code here
-
+#include <stdio.h>
+int main(){
+    FILE *fp;
+    char file[30];
+    scanf("%s",file);
+    printf("%s File Created Successfully\n",file);
+    fp=fopen(file,"w");
+    printf("%s File Opened\n",file);
+    fclose(fp);
+    printf("%s File Closed\n",file);
+    return 0;
+}
 
 
 
 Output:
-
-
-//paste your output here
-
-
-
-
-
-
-
-
-
-
+![image](https://github.com/user-attachments/assets/c9d4943f-6173-4393-99f8-b7dedb14ca8e)
 
 Result:
 Thus, the program is verified successfully
