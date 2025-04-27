@@ -57,7 +57,6 @@ int main() {
 
     return 0;
 }
-![Screenshot 2025-04-27 153015](https://github.com/user-attachments/assets/ec59e419-5566-4b0d-9b20-85cbd7df6f74)
 
 
 
@@ -65,7 +64,7 @@ int main() {
 Output:
 
 
-//paste your output here
+![Screenshot 2025-04-27 153015](https://github.com/user-attachments/assets/28404d82-76a5-416d-8f34-fd09a4efb823)
 
 
 
