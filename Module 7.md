@@ -188,20 +188,27 @@ Use scanf to input the file name into the name array and the number of strings i
  
 Program:
 
-//type your code here
-
+#include <stdio.h>
+#include<stdlib.h>
+int main(){
+    FILE *fp;
+    char a[100];
+    int n;
+    scanf("%s %d",a,&n);
+    int arr[n];
+    fp=fopen(a,"w");
+    printf("%s Opened\n",a);
+    for(int i=0;i<n;i++){
+        scanf("%d",&arr[n]);
+    }
+    printf("Data added Successfully");
+    fclose(fp);
+}
 
 
 
 Output:
-
-
-//paste your output here
-
-
-
-
-
+![image](https://github.com/user-attachments/assets/90b24257-75ea-4df0-b33a-73ecabe2c002)
 
 Result:
 Thus, the program is verified successfully
