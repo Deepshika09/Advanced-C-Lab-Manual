@@ -10,11 +10,35 @@ Algorithm:
  
 Program:
 
-//type your code here
+```c
+struct Node{
+    int data; 
+    struct Node *next;
+}*head;
 
+void search(int data)
+{
+   int flag,i=0;
+   struct Node *t=head;
+   while(t!=NULL){
+       if(t->data==data){
+       printf("item %d found at location %d",data,i+1);
+       flag=0;
+   }
+   i++;
+   t=t->next;
+}
+  if(flag!=0){
+      printf("Item not found");
+  }
+ 
+ 
+ 
+}
+```
 Output:
 
-//paste your output here
+![image](https://github.com/user-attachments/assets/508112d0-8e16-46a2-a688-6d518b31a973)
 
 
 
@@ -33,12 +57,38 @@ Algorithm:
 4.	Call the insert function and perform other linked list operations as needed.
  
 Program:
+```c
+struct Node{
+    char data; 
+    struct Node *next;
+}*head;
 
-//type your code here
+
+void insert(char data)
+{
+    struct Node *n = (struct Node*)malloc(sizeof(struct Node));
+    if(n==NULL){
+        printf("Mermory allocation failed!\n");
+        return;
+    }
+    n->data=data;
+    n->next=NULL;
+    if(head==NULL){
+        head=n;
+        return;
+    }
+    struct Node *temp = head;
+    while (temp->next!=NULL){
+        temp=temp->next;
+    }
+    temp->next=n;
+}
+```
 
 Output:
 
-//paste your output here
+
+![image](https://github.com/user-attachments/assets/e1c649dd-1520-4cf2-a6a2-4b22ca8ed487)
 
  
 Result:
@@ -57,12 +107,28 @@ Algorithm:
 4.	Move to the next node by updating the temp pointer to point to the next node (temp = temp->next).
  
 Program:
+```c
+struct Node
+{
+    struct Node *prev;
+    struct Node *next;
+    char data;
+}*head;
 
-//type your code here
-
+void display()
+{
+    struct Node *t=head;
+    while(t!=NULL){
+        printf("%c ",t->data);
+    
+        t=t->next;
+    }   
+}
+```
 Output:
 
-//paste your output here
+
+![image](https://github.com/user-attachments/assets/bd56db01-7d09-43d9-8e9f-4760db5c0b63)
 
 
 Result:
@@ -82,12 +148,42 @@ Algorithm:
 5.	Set the new node's prev pointer to the last node and update the last node's next pointer to the new node.
  
 Program:
+```c
+struct Node
+{
+    struct Node *prev;
+    struct Node *next;
+    float data;
+}*head;
 
-//type your code here
-
+void insert(float data)
+{
+    
+    struct Node *n=(struct Node*)malloc(sizeof(struct Node));
+    if(n==NULL){
+        printf("Memory allocation failed");
+        return;
+    }
+    n->data=data;
+    n->next=NULL;
+    n->prev=NULL;
+    if(head==NULL){
+        head=n;
+        return;
+    }
+    struct Node *t=head;
+    while(t->next!=NULL){
+        t=t->next;
+    }
+    t->next=n;
+    t->prev=t;
+    
+}
+```
 Output:
 
-//paste your output here
+
+![image](https://github.com/user-attachments/assets/9db93e90-7518-47ff-b8c5-ac304a1da32f)
 
 
 Result:
@@ -124,12 +220,29 @@ o	If the element is not found in any node, print a message indicating the elemen
 
 
 Program:
-
-//type your code here
-
+```c
+struct Node{
+    char data; 
+    struct Node *next;
+}*head;
+void delete(){
+    struct Node *ptr;
+    if(head==NULL){
+        printf("List is empty\n");
+    }
+    else
+    {
+        ptr=head;
+        head=ptr->next;
+        free(ptr);
+        printf("Node deleted from the begining ...\n");
+    }
+}
+```
 Output:
 
-//paste your output here
+
+![image](https://github.com/user-attachments/assets/30643448-4001-4ae0-a9e4-8dfb131382d5)
 
 
 
