@@ -14,12 +14,30 @@ Algorithm:
 7.	Move to the next node using the next pointer.
  
 Program:
-
-//type your code here
-
+```
+struct Node   
+{  
+char data[20];  
+struct Node *next;  
+}*head;  
+void display()  
+{
+    struct Node *t=head;
+    if(t==NULL){
+        printf("stack is empty");
+        
+    }
+    
+    while(t!=NULL){
+        printf("%s\n",t->data);
+        t=t->next;
+    }
+    
+}
+```
 Output:
 
-//paste your output here
+![Screenshot 2025-05-14 230601](https://github.com/user-attachments/assets/650fa107-3f3e-4d29-a8fa-6ff4e30434ce)
 
 
 Result:
@@ -39,12 +57,28 @@ Algorithm:
 4.	Set head to point to the next node in the stack.
  
 Program:
-
-//type your code here
-
+```
+struct Node   
+{  
+float  data;  
+struct Node *next;  
+}*head;  
+void pop()  
+{
+    struct Node *t=head;
+    if(t==NULL){
+        printf("stack is empty");
+    }
+    else{
+        t=head;
+        head=t->next;
+        free(t);
+    }
+}
+```
 Output:
 
-//paste your output here
+![image](https://github.com/user-attachments/assets/19bd43f2-57aa-4d08-a964-3b5e692f6a71)
 
 
 
@@ -63,12 +97,29 @@ Algorithm:
 5.	End the display function.
  
 Program:
+```
+struct Node   
+{  
+float  data;  
+struct Node *next;  
+}*head;  
+void pop()  
+{
+    struct Node *t=head;
+    if(t==NULL){
+        printf("stack is empty");
+    }
+    else{
+        t=head;
+        head=t->next;
+        free(t);
+    }
+}
 
-//type your code here
-
+```
 Output:
 
-//paste your output here
+![image](https://github.com/user-attachments/assets/ac3ca9e7-84d1-4184-8684-073f3e252df0)
 
 Result:
 Thus, the program to display queue elements using linked list is verified successfully.
