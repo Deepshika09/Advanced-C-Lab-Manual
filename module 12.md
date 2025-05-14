@@ -98,28 +98,10 @@ Algorithm:
  
 Program:
 ```
-struct Node   
-{  
-float  data;  
-struct Node *next;  
-}*head;  
-void pop()  
-{
-    struct Node *t=head;
-    if(t==NULL){
-        printf("stack is empty");
-    }
-    else{
-        t=head;
-        head=t->next;
-        free(t);
-    }
-}
 
 ```
 Output:
 
-![image](https://github.com/user-attachments/assets/ac3ca9e7-84d1-4184-8684-073f3e252df0)
 
 Result:
 Thus, the program to display queue elements using linked list is verified successfully.
