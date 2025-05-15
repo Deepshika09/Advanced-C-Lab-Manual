@@ -98,9 +98,27 @@ Algorithm:
  
 Program:
 ```
-
+struct Node
+{
+   char data;
+   struct Node *next;
+}*front=NULL,*rear=NULL;
+void display()
+{
+    if(front==NULL){
+        printf("queue is empty\n");
+    }
+    else{
+        printf("queue elements:\n");
+        while(front!=NULL){
+            printf("%c\n",front->data);
+            front=front->next;
+        }
+    }
+}
 ```
 Output:
+![image](https://github.com/user-attachments/assets/d84679aa-ea3b-48fa-9575-588d4c6856c7)
 
 
 Result:
@@ -122,12 +140,37 @@ Algorithm:
 6.	End of Enqueue Operation
  
 Program:
-
-//type your code here
-
+```
+struct Node
+{
+   int data;
+   struct Node *next;
+}*front=NULL,*rear=NULL;
+void enqueue(int data)
+{
+    struct Node* ptr=(struct Node*)malloc(sizeof(struct Node));
+    if(ptr==NULL){
+        printf("OVERFLOW\n");
+    }
+    else{
+        ptr->data=data;
+        if(front==NULL){
+            front=ptr;
+            rear=ptr;
+            front->next=NULL;
+            rear->next=NULL;
+        }
+        else{
+            rear->next=ptr;
+            rear=ptr;
+            rear->next=NULL;
+        }
+    }
+}
+```
 Output:
+![image](https://github.com/user-attachments/assets/6db31a88-7707-4373-b8e3-0fe4b0f0b5d8)
 
-//paste your output here
 
 Result:
 Thus, the program to insert elements in queue using linked list is verified successfully.
@@ -149,12 +192,21 @@ o	If the queue is empty (i.e., the front pointer is NULL), return an error or a 
 o	If the queue is not empty, return the data stored in the front node of the linked list (i.e., the element at the head of the queue).
 
 Program:
-
-//type your code here
+```
+struct Node
+{
+   float data;
+   struct Node *next;
+}*front=NULL,*rear=NULL;
+void peek()
+{
+    printf("%.2f\n",front->data);
+}
+```
 
 Output:
 
-//paste your output here
+![image](https://github.com/user-attachments/assets/6997eca4-3264-4ef2-a22b-7975445d0fe3)
 
 
 
